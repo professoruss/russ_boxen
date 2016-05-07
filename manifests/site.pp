@@ -192,4 +192,41 @@ match ExtraWhitespace /\s\+$/
 filetype plugin indent on'
   }
 
+  boxen::osx_defaults { 'set terminal startup to pro':
+    ensure => present,
+    domain => 'com.apple.Terminal',
+    key    => 'Startup Window Settings',
+    type   => 'string',
+    value  => 'Pro',
+    user   => $::boxen_user,
+  }
+
+  boxen::osx_defaults { 'set terminal default to pro':
+    ensure => present,
+    domain => 'com.apple.Terminal',
+    key    => 'Default Window Settings',
+    type   => 'string',
+    value  => 'Pro',
+    user   => $::boxen_user,
+  }
+
+  boxen::osx_defaults { 'Show Full URL':
+    ensure => present,
+    domain => 'com.apple.Safari',
+    key    => 'ShowFullURLInSmartSearchField',
+    type   => 'string',
+    value  => '1',
+    user   => $::boxen_user,
+  }
+
+  boxen::osx_defaults { 'Show Overlay Status Bar':
+    ensure => present,
+    domain => 'com.apple.Safari',
+    key    => 'ShowOverlayStatusBar',
+    type   => 'string',
+    value  => '1',
+    user   => $::boxen_user,
+  }
+
 }
+
