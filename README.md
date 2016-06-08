@@ -1,3 +1,5 @@
+xcode-select --install
+
 # Our Boxen
 
 This is a template Boxen project designed for your organization to fork and
