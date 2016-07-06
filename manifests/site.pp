@@ -191,8 +191,7 @@ highlight ExtraWhitespace ctermbg=darkgreen guibg=darkgreen
 match ExtraWhitespace /\s\+$/
 
 filetype plugin indent on
-
-set indent_guides_enable_on_vim_startup = 1'
+'
   }
 
   boxen::osx_defaults { 'set terminal startup to pro':
