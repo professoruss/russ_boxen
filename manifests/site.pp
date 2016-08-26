@@ -192,6 +192,8 @@ match ExtraWhitespace /\s\+$/
 
 filetype plugin indent on
 
+let g:vim_json_syntax_conceal = 0
+
 colorscheme default
 
 let g:indent_guides_auto_colors = 0
