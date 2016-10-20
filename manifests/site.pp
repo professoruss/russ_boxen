@@ -180,6 +180,24 @@ syntax on
 " which is not very legible on a black background
 highlight comment ctermfg=cyan
 
+set title
+set number
+set ruler
+set wrap
+set scrolloff=3
+set guioptions=T
+
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+
+set visualbell
+set noerrorbells
+set backspace=indent,eol,start
+
+set hidden
+
 set tabstop=2
 set expandtab
 set softtabstop=2
