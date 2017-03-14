@@ -170,7 +170,8 @@ node default {
   'scrooloose/syntastic',
   'mv/mv-vim-puppet.git',
   'sjl/gundo.vim',
-  'nathanaelkane/vim-indent-guides'
+  'nathanaelkane/vim-indent-guides',
+  'bronson/vim-crosshairs'
 ]: }
 
   file { "${vim::vimrc}":
@@ -218,6 +219,11 @@ let g:indent_guides_auto_colors = 0
 let g:indent_guides_enable_on_vim_startup = 1
 autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#222222 ctermbg=8
 autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#333333 ctermbg=7
+
+set cursorline    " enable the horizontal line
+set cursorcolumn  " enable the vertical line
+" highlight CursorLine   cterm=NONE ctermbg=black ctermfg=NONE guibg=black guifg=NONE 
+highlight CursorColumn cterm=NONE ctermbg=black ctermfg=NONE guibg=black guifg=NONE
 '
   }
 
