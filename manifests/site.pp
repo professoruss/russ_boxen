@@ -239,6 +239,9 @@ let g:airline#extensions#syntastic#enabled = 1
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
+" install powerline fonts locally and get your terminal to use one of them for
+" fancy symbols https://github.com/powerline/fonts
+" i should add this as exec/etc in boxen but lazy tonight
 '
   }
 
