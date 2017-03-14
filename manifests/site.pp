@@ -171,7 +171,8 @@ node default {
   'mv/mv-vim-puppet.git',
   'sjl/gundo.vim',
   'nathanaelkane/vim-indent-guides',
-  'bronson/vim-crosshairs'
+  'bronson/vim-crosshairs',
+  'dodie/vim-disapprove-deep-indentation'
 ]: }
 
   file { "${vim::vimrc}":
@@ -224,6 +225,9 @@ set cursorline    " enable the horizontal line
 set cursorcolumn  " enable the vertical line
 " highlight CursorLine   cterm=NONE ctermbg=black ctermfg=NONE guibg=black guifg=NONE 
 highlight CursorColumn cterm=NONE ctermbg=black ctermfg=NONE guibg=black guifg=NONE
+
+let g:LookOfDisapprovalTabTreshold=5
+let g:LookOfDisapprovalSpaceTreshold=(&tabstop*5)
 '
   }
 
