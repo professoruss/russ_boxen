@@ -143,9 +143,9 @@ node default {
   include vim
   vim::bundle { [
   #'pangloss/vim-javascript',
-  #'scrooloose/nerdtree',
+  'scrooloose/nerdtree',
   #'timcharper/textile.vim',
-  #'tpope/vim-fugitive',
+  'tpope/vim-fugitive',
   #'tpope/vim-git',
   #'tpope/vim-haml',
   #'tpope/vim-markdown',
@@ -172,7 +172,10 @@ node default {
   'sjl/gundo.vim',
   'nathanaelkane/vim-indent-guides',
   'bronson/vim-crosshairs',
-  'dodie/vim-disapprove-deep-indentation'
+  'dodie/vim-disapprove-deep-indentation',
+  'Xuyuanp/nerdtree-git-plugin',
+  'vim-airline/vim-airline',
+  'vim-airline/vim-airline-themes'
 ]: }
 
   file { "${vim::vimrc}":
@@ -204,6 +207,7 @@ set tabstop=2
 set expandtab
 set softtabstop=2
 set shiftwidth=2
+set laststatus=2
 
 highlight LiteralTabs ctermbg=darkgreen guibg=darkgreen
 match LiteralTabs /\s\  /
@@ -228,6 +232,13 @@ highlight CursorColumn cterm=NONE ctermbg=black ctermfg=NONE guibg=black guifg=N
 
 let g:LookOfDisapprovalTabTreshold=5
 let g:LookOfDisapprovalSpaceTreshold=(&tabstop*5)
+
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#syntastic#enabled = 1
+ 
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 '
   }
 
