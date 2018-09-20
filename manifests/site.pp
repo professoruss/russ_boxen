@@ -175,7 +175,8 @@ node default {
   'dodie/vim-disapprove-deep-indentation',
   'Xuyuanp/nerdtree-git-plugin',
   'vim-airline/vim-airline',
-  'vim-airline/vim-airline-themes'
+  'vim-airline/vim-airline-themes',
+  'w0rp/ale'
 ]: }
 
   file { "${vim::vimrc}":
